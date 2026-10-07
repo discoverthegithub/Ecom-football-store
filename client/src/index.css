@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-slate-900 antialiased selection:bg-blue-600 selection:text-white font-sans min-h-screen;
+    background-image: 
+      radial-gradient(at 50% 0%, rgba(219, 234, 254, 0.4) 0px, transparent 65%),
+      radial-gradient(at 100% 100%, rgba(209, 250, 229, 0.3) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-slate-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase tracking-wider px-6 py-3 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-blue-600 text-blue-600 px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:bg-blue-50 hover:border-blue-700 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-emerald {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white font-bold uppercase tracking-wider px-6 py-3 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 transition-all duration-200 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100 placeholder:text-slate-400 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm;
+  }
+  
+  .card-premium {
+    @apply bg-white rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-blue-200 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .gold-gradient-text, .blue-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 font-bold;
+  }
+
+  .glass-header {
+    @apply bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm;
+  }
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
